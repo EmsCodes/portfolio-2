@@ -1,4 +1,75 @@
+.row {
+  margin-top: 50px;
+}
+
 .card {
   width: 90% !important;
   margin: 0 auto;
+  border-radius: 0;
+}
+
+body {
+  background: #000;
+}
+
+#text-bg {
+  background: url("../images/brick-bg.jpg");
+  background-size: contain;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  position: relative;
+}
+
+#text-bg::before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.0064655172) 0%, rgba(0, 0, 0, 0.1702586207) 25%, rgba(0, 0, 0, 0.5732758621) 50%, rgba(0, 0, 0, 0.9137931034) 75%, rgb(0, 0, 0) 100%);
+  opacity: 50%;
+  inset: 0;
+}
+
+h1,
+#developer-text {
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  color: #fff;
+  text-shadow: 0 0 7px #ee767a, 0 0 10px #6456a6, 0 0 21px #ee767a, 0 0 42px #ee767a, 0 0 82px #6456a6, 0 0 92px #6456a6, 0 0 102px #6456a6, 0 0 151px #6456a6;
+  font-size: calc(35px + 65 * (100vw - 300px) / 1300);
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-animation: flicker 2s;
+          animation: flicker 2s;
+  font-family: "proxima-nova-extra-condensed", sans-serif;
+}
+
+#developer-text {
+  font-size: calc(16px + 29 * (100vw - 300px) / 1300);
+  color: #ee767a;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+@-webkit-keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 4px #ee767a, 0 0 11px #6456a6, 0 0 19px #ee767a, 0 0 40px #6456a6, 0 0 80px #6456a6, 0 0 90px #6456a6, 0 0 100px #6456a6, 0 0 150px #6456a6;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 4px #ee767a, 0 0 11px #6456a6, 0 0 19px #ee767a, 0 0 40px #6456a6, 0 0 80px #6456a6, 0 0 90px #6456a6, 0 0 100px #6456a6, 0 0 150px #6456a6;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
 }/*# sourceMappingURL=styles.css.map */

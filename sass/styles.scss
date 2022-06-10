@@ -1,4 +1,79 @@
+@import "./partials/variables";
+
+.row {
+  margin-top: 50px;
+}
 .card {
   width: 90% !important;
   margin: 0 auto;
+  border-radius: 0;
+}
+body {
+  background: #000;
+}
+#text-bg {
+  background: url("../images/brick-bg.jpg");
+  background-size: contain;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  position: relative;
+}
+#text-bg::before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.006465517241379337) 0%,
+    rgba(0, 0, 0, 0.17025862068965514) 25%,
+    rgba(0, 0, 0, 0.5732758620689655) 50%,
+    rgba(0, 0, 0, 0.9137931034482758) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  //   background: #000;
+  opacity: 50%;
+  inset: 0;
+}
+h1,
+#developer-text {
+  position: relative;
+  z-index: 1;
+}
+h1 {
+  color: #fff;
+  text-shadow: 0 0 7px #ee767a, 0 0 10px #6456a6, 0 0 21px #ee767a,
+    0 0 42px #ee767a, 0 0 82px #6456a6, 0 0 92px #6456a6, 0 0 102px #6456a6,
+    0 0 151px #6456a6;
+  font-size: calc(35px + (100 - 35) * ((100vw - 300px) / (1600 - 300)));
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  animation: flicker 2s;
+  font-family: $main-font;
+}
+#developer-text {
+  font-size: calc(16px + (45 - 16) * ((100vw - 300px) / (1600 - 300)));
+  color: $pink;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #ee767a, 0 0 11px #6456a6, 0 0 19px #ee767a,
+      0 0 40px #6456a6, 0 0 80px #6456a6, 0 0 90px #6456a6, 0 0 100px #6456a6,
+      0 0 150px #6456a6;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
 }
