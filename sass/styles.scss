@@ -69,6 +69,11 @@ h1 {
   animation: flicker 3s infinite;
   font-family: $main-font;
 }
+h2 {
+  color: $pink;
+  font-weight: 900;
+  font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
 #developer-text {
   font-size: calc(16px + (45 - 16) * ((100vw - 300px) / (1600 - 300)));
   color: #fff;

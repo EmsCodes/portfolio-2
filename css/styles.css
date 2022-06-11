@@ -55,6 +55,12 @@ h1 {
   font-family: "proxima-nova-extra-condensed", sans-serif;
 }
 
+h2 {
+  color: #ee767a;
+  font-weight: 900;
+  font-size: calc(20px + 10 * (100vw - 300px) / 1300);
+}
+
 #developer-text {
   font-size: calc(16px + 29 * (100vw - 300px) / 1300);
   color: #fff;
