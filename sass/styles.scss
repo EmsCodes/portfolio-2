@@ -1,138 +1,39 @@
 @import "./partials/variables";
+@import "./partials/cards";
+@import "./partials/introduction";
+@import "./partials/footer";
 
-.row {
-  max-width: 100vw;
-  margin: 0 auto;
-  margin-top: 50px;
+header {
+  background: none;
+  position: relative;
+  z-index: 100;
+  top: 15px;
+  left: 5%;
+  padding-bottom: 25px;
 
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    // background: $light-purple;
-    flex: 2;
-
-    .card-link {
-      font-size: 2em;
-    }
-    .links {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-    }
+  a {
+    color: #fff;
+    font-size: 1.2em;
   }
-  .card-img-top {
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
+  a:hover {
+    text-decoration: none !important;
+    color: #fff;
   }
 }
-.card {
-  width: min(90%, 600px);
-  margin: 0 auto;
-  border: 0;
-  display: flex;
-  p {
-    color: $purple;
-  }
-  img {
-    height: 100%;
-  }
-  .fa-link {
-    color: $turqouise;
-  }
-  .fa-github {
-    color: $yellow;
-  }
-}
+
 body {
   font-family: $secondary-font;
   padding: 0;
   overflow-x: hidden;
   background: #000;
-  margin: 0;
-}
-
-#text-bg {
-  background: url("../images/brick-bg.jpg");
-  background-size: contain;
-  padding-top: 50px;
-  padding-bottom: 100px;
-  position: relative;
-  border-bottom: 5px solid $pink;
-  text-shadow: 0 0 7px #ee767a, 0 0 10px #6456a6, 0 0 21px #ee767a,
-    0 0 42px #ee767a, 0 0 82px #6456a6, 0 0 92px #6456a6, 0 0 102px #6456a6,
-    0 0 151px #6456a6;
-}
-#text-bg::before {
-  content: "";
-  position: absolute;
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0.45964125560538116) 0%,
-    rgba(0, 0, 0, 0.7847533632286996) 35%,
-    rgba(0, 0, 0, 0.8946188340807175) 60%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  inset: 0;
-}
-h1,
-#developer-text {
-  position: relative;
-  z-index: 1;
-}
-h1 {
-  color: #fff;
-  text-shadow: 0 0 7px #ee767a, 0 0 10px #6456a6, 0 0 21px #ee767a,
-    0 0 42px #ee767a, 0 0 82px #6456a6, 0 0 92px #6456a6, 0 0 102px #6456a6,
-    0 0 151px #6456a6;
-  font-size: calc(35px + (100 - 35) * ((100vw - 300px) / (1600 - 300)));
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  text-align: center;
-  text-transform: uppercase;
-  animation: flicker 3s infinite;
-  font-family: $main-font;
-}
-h2 {
-  color: $pink;
-  font-weight: 900;
-  font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
-}
-#developer-text {
-  font-size: calc(16px + (45 - 16) * ((100vw - 300px) / (1600 - 300)));
-  color: #fff;
-  text-shadow: 0 0 7px #ee767a, 0 0 10px #6456a6, 0 0 21px #ee767a,
-    0 0 42px #ee767a, 0 0 82px #6456a6, 0 0 92px #6456a6, 0 0 102px #6456a6,
-    0 0 151px #6456a6;
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 0;
-}
-@keyframes flicker {
-  0%,
-  18%,
-  22%,
-  25%,
-  53%,
-  57%,
-  100% {
-    text-shadow: 0 0 4px #ee767a, 0 0 11px #6456a6, 0 0 19px #ee767a,
-      0 0 40px #6456a6, 0 0 80px #6456a6, 0 0 90px #6456a6, 0 0 100px #6456a6,
-      0 0 150px #6456a6;
-  }
-  20%,
-  24%,
-  55% {
-    text-shadow: none;
-  }
 }
 
 @media screen and (min-width: 992px) {
+  header {
+    padding-bottom: 100px;
+  }
   .row {
-    margin-top: 50px;
-
+    margin-top: -75px;
     .card-content {
       .card-link {
         font-size: 2em;
@@ -147,11 +48,14 @@ h2 {
   .card {
     width: 90% !important;
     display: flex;
-    height: 500px;
+    height: 100%;
     img {
       height: 250px;
       object-fit: cover;
       object-position: top;
     }
+  }
+  #neon-box {
+    width: 50%;
   }
 }
